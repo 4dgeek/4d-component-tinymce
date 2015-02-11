@@ -17,14 +17,15 @@ function getContent() {
 
 <script src="tinymce.min.js"></script>
 <script>tinymce.init({
+				plugins: "code",
 				selector:'textarea',
 				resize: "both",
-				width : 570,
+				width : 770,
 				height : 440,
 				menu : 'newdocument undo redo visualaid cut copy paste selectall bold italic underline strikethrough subscript superscript removeformat formats',
-				//toolbar: "undo redo | styleselect | bold italic | link image"
-				});
-</script>
+				//toolbar: "undo redo | styleselect | bold italic | link image | code"
+				toolbar: 'newdocument undo redo bold styleselect italic underline strikethrough alignleft aligncenter alignright alignjustify bullist numlist outdent indent removeformat code'
+});</script>
 </head>
 <body>
 <textarea id="waContent">Your content here.</textarea>
