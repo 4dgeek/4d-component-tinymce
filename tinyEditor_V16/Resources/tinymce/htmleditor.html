@@ -1,0 +1,32 @@
+<html>
+<head>
+
+<script type="text/javascript">
+function setContent(newContent) {
+	newContent = newContent.replace(/\\r\\n/g, "\n"); 
+	tinyMCE.activeEditor.setContent(newContent);
+}
+</script>
+
+<script type="text/javascript">
+function getContent() {
+	var newContent = tinyMCE.activeEditor.getContent();
+	return newContent;
+}
+</script>
+
+<script src="tinymce.min.js"></script>
+<script>tinymce.init({
+				plugins: 'link code',
+				selector:'textarea',
+				resize: true,
+				width : '100%',
+				height : '80%',
+				menu : 'newdocument undo redo visualaid cut copy paste selectall bold italic underline strikethrough subscript superscript removeformat formats',
+				toolbar: 'newdocument undo redo bold styleselect italic underline strikethrough alignleft aligncenter alignright alignjustify bullist numlist outdent indent link removeformat code'
+});</script>
+</head>
+<body>
+<textarea id="waContent">Your content here.</textarea>
+</body>
+</html>
